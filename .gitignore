@@ -37,3 +37,7 @@ build/
 # Log Files
 *.log
 **/*.log
+
+#gradle
+.gradle
+**/gradle
