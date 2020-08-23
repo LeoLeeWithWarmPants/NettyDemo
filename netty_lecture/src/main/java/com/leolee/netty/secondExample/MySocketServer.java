@@ -1,6 +1,5 @@
 package com.leolee.netty.secondExample;
 
-import com.leolee.netty.firstExample.TestServerInitializer;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.EventLoopGroup;
