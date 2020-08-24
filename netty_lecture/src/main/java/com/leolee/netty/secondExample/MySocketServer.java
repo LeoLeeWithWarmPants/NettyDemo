@@ -28,7 +28,8 @@ public class MySocketServer {
             ServerBootstrap serverBootstrap = new ServerBootstrap();
             serverBootstrap.group(bossGroup, workerGroup)
                     .channel(NioServerSocketChannel.class)
-                    .childHandler(new MySocketServerInitializer());//子处理器,自定义处理器
+                    //子处理器,自定义处理器，服务端可以使用childHandler或者handler,handlerr对应接收线程组（bossGroup），childHandler对应处理线程组（workerGroup）
+                    .childHandler(new MySocketServerInitializer());
 
             //绑定监听端口
             ChannelFuture channelFuture = serverBootstrap.bind(8899).sync();
