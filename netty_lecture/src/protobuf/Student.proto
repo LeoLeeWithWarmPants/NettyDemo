@@ -1,0 +1,17 @@
+syntax = "proto2";
+
+package com.leolee.protobuf;
+
+option optimize_for = SPEED;//Can be set to SPEED, CODE_SIZE, or LITE_RUNTIME,This affects the C++ and Java code generators (and possibly third-party generators) in the following ways
+option java_package = "com.leolee.protobuf";
+option java_outer_classname = "DataInfo";
+
+message Student {
+
+  required string name = 1;
+
+  optional int32 age = 2;
+
+  optional string address = 3;
+}
+//生成java code 命令：protoc --java_out=src/main/java/ src/protobuf/Student.proto
