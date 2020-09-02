@@ -26,7 +26,7 @@ public class MyClient {
             bootstrap.group(eventLoopGroup).channel(NioSocketChannel.class).handler(new MyClientInitializer());
 
             ChannelFuture channelFuture = bootstrap.connect("localhost", 8899).sync();
-            channelFuture.channel().close().sync();
+            channelFuture.channel().closeFuture().sync();
         } finally {
             //优雅关闭
             eventLoopGroup.shutdownGracefully();
