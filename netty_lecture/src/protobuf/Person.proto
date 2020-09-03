@@ -1,0 +1,51 @@
+syntax = "proto2";
+
+package com.leolee.protobuf;
+
+option optimize_for = SPEED;//Can be set to SPEED, CODE_SIZE, or LITE_RUNTIME,This affects the C++ and Java code generators (and possibly third-party generators) in the following ways
+option java_package = "com.leolee.protobuf";
+option java_outer_classname = "DataInfo2";
+
+//生成java code 命令：protoc --java_out=src/main/java/ src/protobuf/Person.proto
+
+
+//----------------多message的根节点
+message DataPackage {
+
+  //数据包类型
+  enum PackageType {
+
+    STUDENT = 0;
+    DOG = 1;
+
+  }
+
+  required PackageType package_type = 1;
+
+  oneof Package {
+
+      Student sudent = 2;
+      Dog dog = 3;
+
+  }
+}
+
+
+//----------------多message
+message Student {
+
+  optional string name = 1;
+
+  optional int32 age = 2;
+
+  optional string address = 3;
+}
+
+
+message Dog {
+
+  optional string dog_name = 1;
+
+  optional int32 dog_age = 2;
+
+}
