@@ -18,8 +18,8 @@ public class ThriftClient {
     public static void main(String[] args) {
 
         //服务端transport用的是TFramedTransport，客户端也要用TFramedTransport
-        TTransport transport = new TFramedTransport(new TSocket("127.0.0.1", 8899), 60);
-        TProtocol protocol = new TCompactProtocol(transport);
+        TTransport transport = new TFramedTransport(new TSocket("127.0.0.1", 8899), 60);//对应服务端的传输层方法[TFramed]
+        TProtocol protocol = new TCompactProtocol(transport);//对应服务端的协议层方法[TCompact]
         PersonService.Client client = new PersonService.Client(protocol);
 
         try {

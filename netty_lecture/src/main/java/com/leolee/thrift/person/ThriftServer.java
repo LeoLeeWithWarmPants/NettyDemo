@@ -20,13 +20,14 @@ public class ThriftServer {
 
     public static void main(String[] args) throws TTransportException {
 
-        TNonblockingServerSocket serverSocket = new TNonblockingServerSocket(8899);
+        TNonblockingServerSocket serverSocket = new TNonblockingServerSocket(8899);//socket通道对象创建
         THsHaServer.Args arg = new THsHaServer.Args(serverSocket).minWorkerThreads(2).maxWorkerThreads(4);
+        //绑定Service层处理器
         PersonService.Processor<PersonServiceImpl> processor = new PersonService.Processor<>(new PersonServiceImpl());
 
         //工厂
-        arg.protocolFactory(new TCompactProtocol.Factory());
-        arg.transportFactory(new TFramedTransport.Factory());
+        arg.protocolFactory(new TCompactProtocol.Factory());//协议层工厂对象，该对象会将二进制字节码，最大限度的压缩
+        arg.transportFactory(new TFramedTransport.Factory());//构建Framed传输层工厂对象
         arg.processorFactory(new TProcessorFactory(processor));
 
         TServer server = new THsHaServer(arg);
