@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package com.leolee.protobuf;
+
+option java_package = "com.leolee.protobuf.gRPC.Student";
+option java_outer_classname = "StudentProto";
+option java_multiple_files = true;//是否生成多个问题，false的话，就是所有的对象，接口都是在一个文件中
+
+//使用 gRPC插件命令：gradle generateProto，生成java code
+
+//定义service层
+service StudentService {
+
+  //A simple RPC
+  rpc GetRealNameByUserName (MyRequest) returns (MyResponse) {}
+
+}
+
+//定义请求和响应
+message MyRequest {
+  string username = 1;
+}
+
+message MyResponse {
+  string realName = 1;
+}

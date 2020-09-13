@@ -1,6 +1,40 @@
 plugins {
     id 'java'
+//    id 'com.google.protobuf' version '0.8.8' //使用gRPC插件根据.proto文件生成java code后一定要关闭插件
 }
+
+//使用gRPC插件根据.proto文件生成java code后一定要关闭插件
+//protobuf {
+//    protoc {
+//        artifact = "com.google.protobuf:protoc:3.12.0"
+//    }
+//    plugins {
+//        grpc {
+//            artifact = 'io.grpc:protoc-gen-grpc-java:1.32.1'
+//        }
+//    }
+//    generateProtoTasks {
+//        all()*.plugins {
+//            grpc {}
+//        }
+//    }
+//}
+//使用gRPC插件根据.proto文件生成java code后一定要关闭插件
+//sourceSets {
+//    main {
+//        proto {
+//            // In addition to the default 'src/main/proto'
+//            srcDir 'src/main/proto'
+//            //srcDir 'src/main/protocolbuffers' 可以定义多个
+//        }
+//    }
+//    test {
+//        proto {
+//            // In addition to the default 'src/test/proto'
+//            srcDir 'src/test/protocolbuffers'
+//        }
+//    }
+//}
 
 tasks.withType(JavaCompile) {
     options.encoding = "UTF-8"
@@ -20,10 +54,19 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
 
     compile (
-            "io.netty:netty-all:4.1.51.Final",
+            "io.netty:netty-all:4.1.51.Final", //implementation("io.netty:netty-all:4.1.10.Final")
+
             "com.google.protobuf:protobuf-java:3.13.0",
             "com.google.protobuf:protobuf-java-util:3.13.0",
-            "org.apache.thrift:libthrift:0.13.0"
+
+            "org.apache.thrift:libthrift:0.13.0",
+
+            "io.grpc:grpc-netty-shaded:1.32.1",
+            "io.grpc:grpc-protobuf:1.32.1",
+            "io.grpc:grpc-stub:1.32.1"
+
     )
-//    implementation("io.netty:netty-all:4.1.10.Final")
+//    compileOnly 'org.apache.tomcat:annotations-api:6.0.53' // (gRPC) necessary for Java 9+
 }
+
+
