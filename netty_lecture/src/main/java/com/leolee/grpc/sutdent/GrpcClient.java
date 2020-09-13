@@ -47,7 +47,7 @@ public class GrpcClient {
 
         System.out.println("server response:" + response.getRealName());
 
-        System.out.println("——————————————————————A server-side streaming RPC ————————————————————————");
+        System.out.println("——————————————————————A server-side streaming RPC————————————————————————");
 
         //流式的返回，会将每一个返回对象放入一个迭代器中
         Iterator<StudentResponse> studentResponseList = grpcClient.studentServiceBlockingStub
@@ -61,7 +61,7 @@ public class GrpcClient {
             System.out.println("city:" + studentResponse.getCity());
         }
 
-        System.out.println("——————————————————————A client-side streaming RPC ————————————————————————");
+        System.out.println("——————————————————————A client-side streaming RPC————————————————————————");
 
         StreamObserver<StudentResponseList> studentResponseListStreamObserver = new StreamObserver<StudentResponseList>() {
 
@@ -101,8 +101,47 @@ public class GrpcClient {
                 .setAge(25).build());
         studentRequestStreamObserver.onCompleted();
 
+        System.out.println("——————————————————————A bidirectional streaming RPC————————————————————————");
+
+        StreamObserver<StreamRequest> responseStreamObserver = grpcClient.studentServiceStub.bidirectionalStreamTalk(new StreamObserver<StreamResponse>() {
+
+            /**
+             * 功能描述: <br> 接收服务端的流消息
+             * 〈〉
+             * @Param: [value]
+             * @Return: void
+             * @Author: LeoLee
+             * @Date: 2020/9/13 22:46
+             */
+            @Override
+            public void onNext(StreamResponse value) {
+
+                System.out.println(value.getResponseInfo());
+            }
+
+            @Override
+            public void onError(Throwable t) {
+
+                System.out.println("onError:" + t.getMessage());
+            }
+
+            @Override
+            public void onCompleted() {
+
+                System.out.println("onCompleted");
+            }
+        });
+
+        //模拟发送数据给服务端
+        for (int i = 0; i < 5; i++) {
+            responseStreamObserver.onNext(StreamRequest.newBuilder()
+                    .setRequestInfo("this is request from client:" + i)
+                    .build());
+            Thread.sleep(1000);
+        }
+
         //由于studentServiceStub = StudentServiceGrpc.newStub(channel);中studentServiceStub是异步的（详见StudentServiceGrpc.newStub），
         //导致请求还没有发送完成，当前线程就执行完毕了，所以如果想要看到相关的打印，需要让主线程多等待一会
-        Thread.sleep(5000);
+        Thread.sleep(6000);
     }
 }

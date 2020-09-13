@@ -20,6 +20,8 @@ service StudentService {
   //A client-side streaming RPC
   rpc GetStudentWapperByAge (stream StudentRequest) returns (StudentResponseList) {}
 
+  //A bidirectional streaming RPC
+  rpc BidirectionalStreamTalk (stream StreamRequest) returns (stream StreamResponse) {}
 }
 
 //定义请求和响应
@@ -43,4 +45,12 @@ message StudentResponse {
 
 message StudentResponseList {
   repeated StudentResponse studentResponse = 1;
+}
+
+message StreamRequest {
+  string request_info = 1;
+}
+
+message StreamResponse {
+  string response_info = 1;
 }

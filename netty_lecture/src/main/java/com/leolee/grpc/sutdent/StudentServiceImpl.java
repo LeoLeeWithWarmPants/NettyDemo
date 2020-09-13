@@ -4,6 +4,8 @@ package com.leolee.grpc.sutdent;
 import com.leolee.protobuf.gRPC.Student.*;
 import io.grpc.stub.StreamObserver;
 
+import java.util.UUID;
+
 /**
  * @ClassName StudentServiceImpl
  * @Description: TODO
@@ -114,6 +116,61 @@ public class StudentServiceImpl extends StudentServiceGrpc.StudentServiceImplBas
                         .build();
 
                 responseObserver.onNext(studentResponseList);
+                responseObserver.onCompleted();
+            }
+        };
+    }
+
+    /**
+     * 功能描述: <br> A bidirectional streaming RPC
+     * 〈〉
+     * @Param: [responseObserver]
+     * @Return: io.grpc.stub.StreamObserver<com.leolee.protobuf.gRPC.Student.StreamRequest>
+     * @Author: LeoLee
+     * @Date: 2020/9/13 21:46
+     */
+    @Override
+    public StreamObserver<StreamRequest> bidirectionalStreamTalk(StreamObserver<StreamResponse> responseObserver) {
+
+        return new StreamObserver<StreamRequest>() {
+
+            /**
+             * 功能描述: <br> 当客户端流式请求发送的时候，每发送一个StudentRequest，该方法将会被回调一次
+             * 〈〉
+             * @Param: [value]
+             * @Return: void
+             * @Author: LeoLee
+             * @Date: 2020/9/13 21:56
+             */
+            @Override
+            public void onNext(StreamRequest value) {
+
+                //接收客户端数据
+                System.out.println("onNext request param [requestInfo]:" + value.getRequestInfo());
+
+                //将响应信息通过一条独立于客户端的流返回给客户端
+                responseObserver.onNext(StreamResponse.newBuilder()
+                        .setResponseInfo("this is response from server to client[" + value.getRequestInfo() + "]:" + UUID.randomUUID().toString())
+                        .build());
+            }
+
+            @Override
+            public void onError(Throwable t) {
+
+                System.out.println("onError:" + t.getMessage());
+            }
+
+            /**
+             * 功能描述: <br> 虽然客户端和服务端互相传递数据的流是独立的，但是正常业务场景情况下客户端的流完毕后，服务端也是关闭的
+             * 〈〉所以在这里当客户端的请求流关闭后，也关闭流
+             * @Param: []
+             * @Return: void
+             * @Author: LeoLee
+             * @Date: 2020/9/13 22:19
+             */
+            @Override
+            public void onCompleted() {
+
                 responseObserver.onCompleted();
             }
         };
