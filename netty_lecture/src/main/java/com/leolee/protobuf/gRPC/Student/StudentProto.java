@@ -24,6 +24,16 @@ public final class StudentProto {
   static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_leolee_protobuf_MyResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_leolee_protobuf_StudentRequest_descriptor;
+  static final
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_leolee_protobuf_StudentRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_leolee_protobuf_StudentResponse_descriptor;
+  static final
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_leolee_protobuf_StudentResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -35,11 +45,16 @@ public final class StudentProto {
     String[] descriptorData = {
       "\n\021gRPCStudent.proto\022\023com.leolee.protobuf" +
       "\"\035\n\tMyRequest\022\020\n\010username\030\001 \001(\t\"\036\n\nMyRes" +
-      "ponse\022\020\n\010realName\030\001 \001(\t2l\n\016StudentServic" +
-      "e\022Z\n\025GetRealNameByUserName\022\036.com.leolee." +
-      "protobuf.MyRequest\032\037.com.leolee.protobuf" +
-      ".MyResponse\"\000B2\n com.leolee.protobuf.gRP" +
-      "C.StudentB\014StudentProtoP\001b\006proto3"
+      "ponse\022\020\n\010realName\030\001 \001(\t\"\035\n\016StudentReques" +
+      "t\022\013\n\003age\030\001 \001(\005\":\n\017StudentResponse\022\014\n\004nam" +
+      "e\030\001 \001(\t\022\013\n\003age\030\002 \001(\005\022\014\n\004city\030\003 \001(\t2\316\001\n\016S" +
+      "tudentService\022Z\n\025GetRealNameByUserName\022\036" +
+      ".com.leolee.protobuf.MyRequest\032\037.com.leo" +
+      "lee.protobuf.MyResponse\"\000\022`\n\017GetStudentB" +
+      "yAge\022#.com.leolee.protobuf.StudentReques" +
+      "t\032$.com.leolee.protobuf.StudentResponse\"" +
+      "\0000\001B2\n com.leolee.protobuf.gRPC.StudentB" +
+      "\014StudentProtoP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -57,6 +72,18 @@ public final class StudentProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_leolee_protobuf_MyResponse_descriptor,
         new String[] { "RealName", });
+    internal_static_com_leolee_protobuf_StudentRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_com_leolee_protobuf_StudentRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_leolee_protobuf_StudentRequest_descriptor,
+        new String[] { "Age", });
+    internal_static_com_leolee_protobuf_StudentResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_com_leolee_protobuf_StudentResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_leolee_protobuf_StudentResponse_descriptor,
+        new String[] { "Name", "Age", "City", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

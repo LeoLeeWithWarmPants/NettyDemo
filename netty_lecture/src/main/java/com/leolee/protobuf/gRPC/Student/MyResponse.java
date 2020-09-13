@@ -76,13 +76,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.leolee.protobuf.gRPC.Student.StudentProto.internal_static_com_leolee_protobuf_MyResponse_descriptor;
+    return StudentProto.internal_static_com_leolee_protobuf_MyResponse_descriptor;
   }
 
   @Override
   protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.leolee.protobuf.gRPC.Student.StudentProto.internal_static_com_leolee_protobuf_MyResponse_fieldAccessorTable
+    return StudentProto.internal_static_com_leolee_protobuf_MyResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             MyResponse.class, Builder.class);
   }
@@ -285,16 +285,16 @@ private static final long serialVersionUID = 0L;
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:com.leolee.protobuf.MyResponse)
-      com.leolee.protobuf.gRPC.Student.MyResponseOrBuilder {
+      MyResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.leolee.protobuf.gRPC.Student.StudentProto.internal_static_com_leolee_protobuf_MyResponse_descriptor;
+      return StudentProto.internal_static_com_leolee_protobuf_MyResponse_descriptor;
     }
 
     @Override
     protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.leolee.protobuf.gRPC.Student.StudentProto.internal_static_com_leolee_protobuf_MyResponse_fieldAccessorTable
+      return StudentProto.internal_static_com_leolee_protobuf_MyResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               MyResponse.class, Builder.class);
     }
@@ -325,7 +325,7 @@ private static final long serialVersionUID = 0L;
     @Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.leolee.protobuf.gRPC.Student.StudentProto.internal_static_com_leolee_protobuf_MyResponse_descriptor;
+      return StudentProto.internal_static_com_leolee_protobuf_MyResponse_descriptor;
     }
 
     @Override
