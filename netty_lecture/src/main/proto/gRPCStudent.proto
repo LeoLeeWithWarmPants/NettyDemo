@@ -17,6 +17,9 @@ service StudentService {
   //A server-side streaming RPC
   rpc GetStudentByAge (StudentRequest) returns (stream StudentResponse) {}
 
+  //A client-side streaming RPC
+  rpc GetStudentWapperByAge (stream StudentRequest) returns (StudentResponseList) {}
+
 }
 
 //定义请求和响应
@@ -36,4 +39,8 @@ message StudentResponse {
   string name = 1;
   int32 age = 2;
   string city = 3;
+}
+
+message StudentResponseList {
+  repeated StudentResponse studentResponse = 1;
 }
