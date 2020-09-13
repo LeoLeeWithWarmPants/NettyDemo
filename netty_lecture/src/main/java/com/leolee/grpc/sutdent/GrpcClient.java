@@ -65,6 +65,7 @@ public class GrpcClient {
 
         StreamObserver<StudentResponseList> studentResponseListStreamObserver = new StreamObserver<StudentResponseList>() {
 
+            //每当服务端响应的时候，会回调该方法一次
             @Override
             public void onNext(StudentResponseList value) {
 
@@ -91,7 +92,7 @@ public class GrpcClient {
 
         //发出对服务端的异步流请求
         StreamObserver<StudentRequest> studentRequestStreamObserver = grpcClient.studentServiceStub.getStudentWapperByAge(studentResponseListStreamObserver);
-        //构造传递给服务端的参数
+        //构造传递给服务端的参数，流式发送给服务端
         studentRequestStreamObserver.onNext(StudentRequest.newBuilder()
                 .setAge(25).build());
         studentRequestStreamObserver.onNext(StudentRequest.newBuilder()

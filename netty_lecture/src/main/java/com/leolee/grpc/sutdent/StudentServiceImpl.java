@@ -64,7 +64,7 @@ public class StudentServiceImpl extends StudentServiceGrpc.StudentServiceImplBas
      * @Date: 2020/9/13 16:08
      */
     @Override
-    public StreamObserver<StudentRequest> getStudentWapperByAge(StreamObserver<StudentResponseList> responseObserver) {
+        public StreamObserver<StudentRequest> getStudentWapperByAge(StreamObserver<StudentResponseList> responseObserver) {
 
         return new StreamObserver<StudentRequest>() {
 
