@@ -10,12 +10,12 @@ public interface StudentResponseListOrBuilder extends
   /**
    * <code>repeated .com.leolee.protobuf.StudentResponse studentResponse = 1;</code>
    */
-  java.util.List<StudentResponse>
+  java.util.List<com.leolee.protobuf.gRPC.Student.StudentResponse> 
       getStudentResponseList();
   /**
    * <code>repeated .com.leolee.protobuf.StudentResponse studentResponse = 1;</code>
    */
-  StudentResponse getStudentResponse(int index);
+  com.leolee.protobuf.gRPC.Student.StudentResponse getStudentResponse(int index);
   /**
    * <code>repeated .com.leolee.protobuf.StudentResponse studentResponse = 1;</code>
    */
@@ -23,11 +23,11 @@ public interface StudentResponseListOrBuilder extends
   /**
    * <code>repeated .com.leolee.protobuf.StudentResponse studentResponse = 1;</code>
    */
-  java.util.List<? extends StudentResponseOrBuilder>
+  java.util.List<? extends com.leolee.protobuf.gRPC.Student.StudentResponseOrBuilder> 
       getStudentResponseOrBuilderList();
   /**
    * <code>repeated .com.leolee.protobuf.StudentResponse studentResponse = 1;</code>
    */
-  StudentResponseOrBuilder getStudentResponseOrBuilder(
-          int index);
+  com.leolee.protobuf.gRPC.Student.StudentResponseOrBuilder getStudentResponseOrBuilder(
+      int index);
 }

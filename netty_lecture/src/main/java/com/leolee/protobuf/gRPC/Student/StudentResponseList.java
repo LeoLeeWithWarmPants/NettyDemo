@@ -19,14 +19,14 @@ private static final long serialVersionUID = 0L;
     studentResponse_ = java.util.Collections.emptyList();
   }
 
-  @Override
+  @java.lang.Override
   @SuppressWarnings({"unused"})
-  protected Object newInstance(
+  protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
     return new StudentResponseList();
   }
 
-  @Override
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -37,7 +37,7 @@ private static final long serialVersionUID = 0L;
       throws com.google.protobuf.InvalidProtocolBufferException {
     this();
     if (extensionRegistry == null) {
-      throw new NullPointerException();
+      throw new java.lang.NullPointerException();
     }
     int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
@@ -52,11 +52,11 @@ private static final long serialVersionUID = 0L;
             break;
           case 10: {
             if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              studentResponse_ = new java.util.ArrayList<StudentResponse>();
+              studentResponse_ = new java.util.ArrayList<com.leolee.protobuf.gRPC.Student.StudentResponse>();
               mutable_bitField0_ |= 0x00000001;
             }
             studentResponse_.add(
-                input.readMessage(StudentResponse.parser(), extensionRegistry));
+                input.readMessage(com.leolee.protobuf.gRPC.Student.StudentResponse.parser(), extensionRegistry));
             break;
           }
           default: {
@@ -83,59 +83,59 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return StudentProto.internal_static_com_leolee_protobuf_StudentResponseList_descriptor;
+    return com.leolee.protobuf.gRPC.Student.StudentProto.internal_static_com_leolee_protobuf_StudentResponseList_descriptor;
   }
 
-  @Override
-  protected FieldAccessorTable
+  @java.lang.Override
+  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return StudentProto.internal_static_com_leolee_protobuf_StudentResponseList_fieldAccessorTable
+    return com.leolee.protobuf.gRPC.Student.StudentProto.internal_static_com_leolee_protobuf_StudentResponseList_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            StudentResponseList.class, Builder.class);
+            com.leolee.protobuf.gRPC.Student.StudentResponseList.class, com.leolee.protobuf.gRPC.Student.StudentResponseList.Builder.class);
   }
 
   public static final int STUDENTRESPONSE_FIELD_NUMBER = 1;
-  private java.util.List<StudentResponse> studentResponse_;
+  private java.util.List<com.leolee.protobuf.gRPC.Student.StudentResponse> studentResponse_;
   /**
    * <code>repeated .com.leolee.protobuf.StudentResponse studentResponse = 1;</code>
    */
-  @Override
-  public java.util.List<StudentResponse> getStudentResponseList() {
+  @java.lang.Override
+  public java.util.List<com.leolee.protobuf.gRPC.Student.StudentResponse> getStudentResponseList() {
     return studentResponse_;
   }
   /**
    * <code>repeated .com.leolee.protobuf.StudentResponse studentResponse = 1;</code>
    */
-  @Override
-  public java.util.List<? extends StudentResponseOrBuilder>
+  @java.lang.Override
+  public java.util.List<? extends com.leolee.protobuf.gRPC.Student.StudentResponseOrBuilder> 
       getStudentResponseOrBuilderList() {
     return studentResponse_;
   }
   /**
    * <code>repeated .com.leolee.protobuf.StudentResponse studentResponse = 1;</code>
    */
-  @Override
+  @java.lang.Override
   public int getStudentResponseCount() {
     return studentResponse_.size();
   }
   /**
    * <code>repeated .com.leolee.protobuf.StudentResponse studentResponse = 1;</code>
    */
-  @Override
-  public StudentResponse getStudentResponse(int index) {
+  @java.lang.Override
+  public com.leolee.protobuf.gRPC.Student.StudentResponse getStudentResponse(int index) {
     return studentResponse_.get(index);
   }
   /**
    * <code>repeated .com.leolee.protobuf.StudentResponse studentResponse = 1;</code>
    */
-  @Override
-  public StudentResponseOrBuilder getStudentResponseOrBuilder(
+  @java.lang.Override
+  public com.leolee.protobuf.gRPC.Student.StudentResponseOrBuilder getStudentResponseOrBuilder(
       int index) {
     return studentResponse_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
-  @Override
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -145,7 +145,7 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
-  @Override
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     for (int i = 0; i < studentResponse_.size(); i++) {
@@ -154,7 +154,7 @@ private static final long serialVersionUID = 0L;
     unknownFields.writeTo(output);
   }
 
-  @Override
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -169,15 +169,15 @@ private static final long serialVersionUID = 0L;
     return size;
   }
 
-  @Override
-  public boolean equals(final Object obj) {
+  @java.lang.Override
+  public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof StudentResponseList)) {
+    if (!(obj instanceof com.leolee.protobuf.gRPC.Student.StudentResponseList)) {
       return super.equals(obj);
     }
-    StudentResponseList other = (StudentResponseList) obj;
+    com.leolee.protobuf.gRPC.Student.StudentResponseList other = (com.leolee.protobuf.gRPC.Student.StudentResponseList) obj;
 
     if (!getStudentResponseList()
         .equals(other.getStudentResponseList())) return false;
@@ -185,7 +185,7 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
-  @Override
+  @java.lang.Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -201,69 +201,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static StudentResponseList parseFrom(
+  public static com.leolee.protobuf.gRPC.Student.StudentResponseList parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static StudentResponseList parseFrom(
+  public static com.leolee.protobuf.gRPC.Student.StudentResponseList parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static StudentResponseList parseFrom(
+  public static com.leolee.protobuf.gRPC.Student.StudentResponseList parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static StudentResponseList parseFrom(
+  public static com.leolee.protobuf.gRPC.Student.StudentResponseList parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static StudentResponseList parseFrom(byte[] data)
+  public static com.leolee.protobuf.gRPC.Student.StudentResponseList parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static StudentResponseList parseFrom(
+  public static com.leolee.protobuf.gRPC.Student.StudentResponseList parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static StudentResponseList parseFrom(java.io.InputStream input)
+  public static com.leolee.protobuf.gRPC.Student.StudentResponseList parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static StudentResponseList parseFrom(
+  public static com.leolee.protobuf.gRPC.Student.StudentResponseList parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static StudentResponseList parseDelimitedFrom(java.io.InputStream input)
+  public static com.leolee.protobuf.gRPC.Student.StudentResponseList parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static StudentResponseList parseDelimitedFrom(
+  public static com.leolee.protobuf.gRPC.Student.StudentResponseList parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static StudentResponseList parseFrom(
+  public static com.leolee.protobuf.gRPC.Student.StudentResponseList parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static StudentResponseList parseFrom(
+  public static com.leolee.protobuf.gRPC.Student.StudentResponseList parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -271,23 +271,23 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  @Override
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(StudentResponseList prototype) {
+  public static Builder newBuilder(com.leolee.protobuf.gRPC.Student.StudentResponseList prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-  @Override
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @Override
+  @java.lang.Override
   protected Builder newBuilderForType(
-      BuilderParent parent) {
+      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -297,18 +297,18 @@ private static final long serialVersionUID = 0L;
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:com.leolee.protobuf.StudentResponseList)
-      StudentResponseListOrBuilder {
+      com.leolee.protobuf.gRPC.Student.StudentResponseListOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return StudentProto.internal_static_com_leolee_protobuf_StudentResponseList_descriptor;
+      return com.leolee.protobuf.gRPC.Student.StudentProto.internal_static_com_leolee_protobuf_StudentResponseList_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return StudentProto.internal_static_com_leolee_protobuf_StudentResponseList_fieldAccessorTable
+      return com.leolee.protobuf.gRPC.Student.StudentProto.internal_static_com_leolee_protobuf_StudentResponseList_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              StudentResponseList.class, Builder.class);
+              com.leolee.protobuf.gRPC.Student.StudentResponseList.class, com.leolee.protobuf.gRPC.Student.StudentResponseList.Builder.class);
     }
 
     // Construct using com.leolee.protobuf.gRPC.Student.StudentResponseList.newBuilder()
@@ -317,7 +317,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private Builder(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -327,7 +327,7 @@ private static final long serialVersionUID = 0L;
         getStudentResponseFieldBuilder();
       }
     }
-    @Override
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       if (studentResponseBuilder_ == null) {
@@ -339,29 +339,29 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return StudentProto.internal_static_com_leolee_protobuf_StudentResponseList_descriptor;
+      return com.leolee.protobuf.gRPC.Student.StudentProto.internal_static_com_leolee_protobuf_StudentResponseList_descriptor;
     }
 
-    @Override
-    public StudentResponseList getDefaultInstanceForType() {
-      return StudentResponseList.getDefaultInstance();
+    @java.lang.Override
+    public com.leolee.protobuf.gRPC.Student.StudentResponseList getDefaultInstanceForType() {
+      return com.leolee.protobuf.gRPC.Student.StudentResponseList.getDefaultInstance();
     }
 
-    @Override
-    public StudentResponseList build() {
-      StudentResponseList result = buildPartial();
+    @java.lang.Override
+    public com.leolee.protobuf.gRPC.Student.StudentResponseList build() {
+      com.leolee.protobuf.gRPC.Student.StudentResponseList result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
       return result;
     }
 
-    @Override
-    public StudentResponseList buildPartial() {
-      StudentResponseList result = new StudentResponseList(this);
+    @java.lang.Override
+    public com.leolee.protobuf.gRPC.Student.StudentResponseList buildPartial() {
+      com.leolee.protobuf.gRPC.Student.StudentResponseList result = new com.leolee.protobuf.gRPC.Student.StudentResponseList(this);
       int from_bitField0_ = bitField0_;
       if (studentResponseBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
@@ -376,50 +376,50 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
-    @Override
+    @java.lang.Override
     public Builder clone() {
       return super.clone();
     }
-    @Override
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        Object value) {
+        java.lang.Object value) {
       return super.setField(field, value);
     }
-    @Override
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
-    @Override
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
-    @Override
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, Object value) {
+        int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
-    @Override
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        Object value) {
+        java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
-    @Override
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof StudentResponseList) {
-        return mergeFrom((StudentResponseList)other);
+      if (other instanceof com.leolee.protobuf.gRPC.Student.StudentResponseList) {
+        return mergeFrom((com.leolee.protobuf.gRPC.Student.StudentResponseList)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(StudentResponseList other) {
-      if (other == StudentResponseList.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.leolee.protobuf.gRPC.Student.StudentResponseList other) {
+      if (other == com.leolee.protobuf.gRPC.Student.StudentResponseList.getDefaultInstance()) return this;
       if (studentResponseBuilder_ == null) {
         if (!other.studentResponse_.isEmpty()) {
           if (studentResponse_.isEmpty()) {
@@ -438,7 +438,7 @@ private static final long serialVersionUID = 0L;
             studentResponseBuilder_ = null;
             studentResponse_ = other.studentResponse_;
             bitField0_ = (bitField0_ & ~0x00000001);
-            studentResponseBuilder_ =
+            studentResponseBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getStudentResponseFieldBuilder() : null;
           } else {
@@ -451,21 +451,21 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      StudentResponseList parsedMessage = null;
+      com.leolee.protobuf.gRPC.Student.StudentResponseList parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (StudentResponseList) e.getUnfinishedMessage();
+        parsedMessage = (com.leolee.protobuf.gRPC.Student.StudentResponseList) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -476,22 +476,22 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.util.List<StudentResponse> studentResponse_ =
+    private java.util.List<com.leolee.protobuf.gRPC.Student.StudentResponse> studentResponse_ =
       java.util.Collections.emptyList();
     private void ensureStudentResponseIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        studentResponse_ = new java.util.ArrayList<StudentResponse>(studentResponse_);
+        studentResponse_ = new java.util.ArrayList<com.leolee.protobuf.gRPC.Student.StudentResponse>(studentResponse_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        StudentResponse, StudentResponse.Builder, StudentResponseOrBuilder> studentResponseBuilder_;
+        com.leolee.protobuf.gRPC.Student.StudentResponse, com.leolee.protobuf.gRPC.Student.StudentResponse.Builder, com.leolee.protobuf.gRPC.Student.StudentResponseOrBuilder> studentResponseBuilder_;
 
     /**
      * <code>repeated .com.leolee.protobuf.StudentResponse studentResponse = 1;</code>
      */
-    public java.util.List<StudentResponse> getStudentResponseList() {
+    public java.util.List<com.leolee.protobuf.gRPC.Student.StudentResponse> getStudentResponseList() {
       if (studentResponseBuilder_ == null) {
         return java.util.Collections.unmodifiableList(studentResponse_);
       } else {
@@ -511,7 +511,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .com.leolee.protobuf.StudentResponse studentResponse = 1;</code>
      */
-    public StudentResponse getStudentResponse(int index) {
+    public com.leolee.protobuf.gRPC.Student.StudentResponse getStudentResponse(int index) {
       if (studentResponseBuilder_ == null) {
         return studentResponse_.get(index);
       } else {
@@ -522,7 +522,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .com.leolee.protobuf.StudentResponse studentResponse = 1;</code>
      */
     public Builder setStudentResponse(
-        int index, StudentResponse value) {
+        int index, com.leolee.protobuf.gRPC.Student.StudentResponse value) {
       if (studentResponseBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -539,7 +539,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .com.leolee.protobuf.StudentResponse studentResponse = 1;</code>
      */
     public Builder setStudentResponse(
-        int index, StudentResponse.Builder builderForValue) {
+        int index, com.leolee.protobuf.gRPC.Student.StudentResponse.Builder builderForValue) {
       if (studentResponseBuilder_ == null) {
         ensureStudentResponseIsMutable();
         studentResponse_.set(index, builderForValue.build());
@@ -552,7 +552,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .com.leolee.protobuf.StudentResponse studentResponse = 1;</code>
      */
-    public Builder addStudentResponse(StudentResponse value) {
+    public Builder addStudentResponse(com.leolee.protobuf.gRPC.Student.StudentResponse value) {
       if (studentResponseBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -569,7 +569,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .com.leolee.protobuf.StudentResponse studentResponse = 1;</code>
      */
     public Builder addStudentResponse(
-        int index, StudentResponse value) {
+        int index, com.leolee.protobuf.gRPC.Student.StudentResponse value) {
       if (studentResponseBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -586,7 +586,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .com.leolee.protobuf.StudentResponse studentResponse = 1;</code>
      */
     public Builder addStudentResponse(
-        StudentResponse.Builder builderForValue) {
+        com.leolee.protobuf.gRPC.Student.StudentResponse.Builder builderForValue) {
       if (studentResponseBuilder_ == null) {
         ensureStudentResponseIsMutable();
         studentResponse_.add(builderForValue.build());
@@ -600,7 +600,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .com.leolee.protobuf.StudentResponse studentResponse = 1;</code>
      */
     public Builder addStudentResponse(
-        int index, StudentResponse.Builder builderForValue) {
+        int index, com.leolee.protobuf.gRPC.Student.StudentResponse.Builder builderForValue) {
       if (studentResponseBuilder_ == null) {
         ensureStudentResponseIsMutable();
         studentResponse_.add(index, builderForValue.build());
@@ -614,7 +614,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .com.leolee.protobuf.StudentResponse studentResponse = 1;</code>
      */
     public Builder addAllStudentResponse(
-        Iterable<? extends StudentResponse> values) {
+        java.lang.Iterable<? extends com.leolee.protobuf.gRPC.Student.StudentResponse> values) {
       if (studentResponseBuilder_ == null) {
         ensureStudentResponseIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -654,14 +654,14 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .com.leolee.protobuf.StudentResponse studentResponse = 1;</code>
      */
-    public StudentResponse.Builder getStudentResponseBuilder(
+    public com.leolee.protobuf.gRPC.Student.StudentResponse.Builder getStudentResponseBuilder(
         int index) {
       return getStudentResponseFieldBuilder().getBuilder(index);
     }
     /**
      * <code>repeated .com.leolee.protobuf.StudentResponse studentResponse = 1;</code>
      */
-    public StudentResponseOrBuilder getStudentResponseOrBuilder(
+    public com.leolee.protobuf.gRPC.Student.StudentResponseOrBuilder getStudentResponseOrBuilder(
         int index) {
       if (studentResponseBuilder_ == null) {
         return studentResponse_.get(index);  } else {
@@ -671,7 +671,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .com.leolee.protobuf.StudentResponse studentResponse = 1;</code>
      */
-    public java.util.List<? extends StudentResponseOrBuilder>
+    public java.util.List<? extends com.leolee.protobuf.gRPC.Student.StudentResponseOrBuilder> 
          getStudentResponseOrBuilderList() {
       if (studentResponseBuilder_ != null) {
         return studentResponseBuilder_.getMessageOrBuilderList();
@@ -682,31 +682,31 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .com.leolee.protobuf.StudentResponse studentResponse = 1;</code>
      */
-    public StudentResponse.Builder addStudentResponseBuilder() {
+    public com.leolee.protobuf.gRPC.Student.StudentResponse.Builder addStudentResponseBuilder() {
       return getStudentResponseFieldBuilder().addBuilder(
-          StudentResponse.getDefaultInstance());
+          com.leolee.protobuf.gRPC.Student.StudentResponse.getDefaultInstance());
     }
     /**
      * <code>repeated .com.leolee.protobuf.StudentResponse studentResponse = 1;</code>
      */
-    public StudentResponse.Builder addStudentResponseBuilder(
+    public com.leolee.protobuf.gRPC.Student.StudentResponse.Builder addStudentResponseBuilder(
         int index) {
       return getStudentResponseFieldBuilder().addBuilder(
-          index, StudentResponse.getDefaultInstance());
+          index, com.leolee.protobuf.gRPC.Student.StudentResponse.getDefaultInstance());
     }
     /**
      * <code>repeated .com.leolee.protobuf.StudentResponse studentResponse = 1;</code>
      */
-    public java.util.List<StudentResponse.Builder>
+    public java.util.List<com.leolee.protobuf.gRPC.Student.StudentResponse.Builder> 
          getStudentResponseBuilderList() {
       return getStudentResponseFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        StudentResponse, StudentResponse.Builder, StudentResponseOrBuilder>
+        com.leolee.protobuf.gRPC.Student.StudentResponse, com.leolee.protobuf.gRPC.Student.StudentResponse.Builder, com.leolee.protobuf.gRPC.Student.StudentResponseOrBuilder> 
         getStudentResponseFieldBuilder() {
       if (studentResponseBuilder_ == null) {
         studentResponseBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            StudentResponse, StudentResponse.Builder, StudentResponseOrBuilder>(
+            com.leolee.protobuf.gRPC.Student.StudentResponse, com.leolee.protobuf.gRPC.Student.StudentResponse.Builder, com.leolee.protobuf.gRPC.Student.StudentResponseOrBuilder>(
                 studentResponse_,
                 ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
@@ -715,13 +715,13 @@ private static final long serialVersionUID = 0L;
       }
       return studentResponseBuilder_;
     }
-    @Override
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
-    @Override
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
@@ -732,18 +732,18 @@ private static final long serialVersionUID = 0L;
   }
 
   // @@protoc_insertion_point(class_scope:com.leolee.protobuf.StudentResponseList)
-  private static final StudentResponseList DEFAULT_INSTANCE;
+  private static final com.leolee.protobuf.gRPC.Student.StudentResponseList DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new StudentResponseList();
+    DEFAULT_INSTANCE = new com.leolee.protobuf.gRPC.Student.StudentResponseList();
   }
 
-  public static StudentResponseList getDefaultInstance() {
+  public static com.leolee.protobuf.gRPC.Student.StudentResponseList getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
   private static final com.google.protobuf.Parser<StudentResponseList>
       PARSER = new com.google.protobuf.AbstractParser<StudentResponseList>() {
-    @Override
+    @java.lang.Override
     public StudentResponseList parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -756,13 +756,13 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
-  @Override
+  @java.lang.Override
   public com.google.protobuf.Parser<StudentResponseList> getParserForType() {
     return PARSER;
   }
 
-  @Override
-  public StudentResponseList getDefaultInstanceForType() {
+  @java.lang.Override
+  public com.leolee.protobuf.gRPC.Student.StudentResponseList getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

@@ -11,7 +11,7 @@ public interface StreamResponseOrBuilder extends
    * <code>string response_info = 1;</code>
    * @return The responseInfo.
    */
-  String getResponseInfo();
+  java.lang.String getResponseInfo();
   /**
    * <code>string response_info = 1;</code>
    * @return The bytes for responseInfo.

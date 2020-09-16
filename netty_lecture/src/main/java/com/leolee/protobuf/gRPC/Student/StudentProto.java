@@ -16,37 +16,37 @@ public final class StudentProto {
   }
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_leolee_protobuf_MyRequest_descriptor;
-  static final
+  static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_leolee_protobuf_MyRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_leolee_protobuf_MyResponse_descriptor;
-  static final
+  static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_leolee_protobuf_MyResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_leolee_protobuf_StudentRequest_descriptor;
-  static final
+  static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_leolee_protobuf_StudentRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_leolee_protobuf_StudentResponse_descriptor;
-  static final
+  static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_leolee_protobuf_StudentResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_leolee_protobuf_StudentResponseList_descriptor;
-  static final
+  static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_leolee_protobuf_StudentResponseList_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_leolee_protobuf_StreamRequest_descriptor;
-  static final
+  static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_leolee_protobuf_StreamRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_leolee_protobuf_StreamResponse_descriptor;
-  static final
+  static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_leolee_protobuf_StreamResponse_fieldAccessorTable;
 
@@ -57,7 +57,7 @@ public final class StudentProto {
   private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    String[] descriptorData = {
+    java.lang.String[] descriptorData = {
       "\n\021gRPCStudent.proto\022\023com.leolee.protobuf" +
       "\"\035\n\tMyRequest\022\020\n\010username\030\001 \001(\t\"\036\n\nMyRes" +
       "ponse\022\020\n\010realName\030\001 \001(\t\"\035\n\016StudentReques" +
@@ -90,43 +90,43 @@ public final class StudentProto {
     internal_static_com_leolee_protobuf_MyRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_leolee_protobuf_MyRequest_descriptor,
-        new String[] { "Username", });
+        new java.lang.String[] { "Username", });
     internal_static_com_leolee_protobuf_MyResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_com_leolee_protobuf_MyResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_leolee_protobuf_MyResponse_descriptor,
-        new String[] { "RealName", });
+        new java.lang.String[] { "RealName", });
     internal_static_com_leolee_protobuf_StudentRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_com_leolee_protobuf_StudentRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_leolee_protobuf_StudentRequest_descriptor,
-        new String[] { "Age", });
+        new java.lang.String[] { "Age", });
     internal_static_com_leolee_protobuf_StudentResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_com_leolee_protobuf_StudentResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_leolee_protobuf_StudentResponse_descriptor,
-        new String[] { "Name", "Age", "City", });
+        new java.lang.String[] { "Name", "Age", "City", });
     internal_static_com_leolee_protobuf_StudentResponseList_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_com_leolee_protobuf_StudentResponseList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_leolee_protobuf_StudentResponseList_descriptor,
-        new String[] { "StudentResponse", });
+        new java.lang.String[] { "StudentResponse", });
     internal_static_com_leolee_protobuf_StreamRequest_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_com_leolee_protobuf_StreamRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_leolee_protobuf_StreamRequest_descriptor,
-        new String[] { "RequestInfo", });
+        new java.lang.String[] { "RequestInfo", });
     internal_static_com_leolee_protobuf_StreamResponse_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_com_leolee_protobuf_StreamResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_leolee_protobuf_StreamResponse_descriptor,
-        new String[] { "ResponseInfo", });
+        new java.lang.String[] { "ResponseInfo", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

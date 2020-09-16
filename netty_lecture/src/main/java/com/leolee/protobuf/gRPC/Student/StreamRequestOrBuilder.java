@@ -11,7 +11,7 @@ public interface StreamRequestOrBuilder extends
    * <code>string request_info = 1;</code>
    * @return The requestInfo.
    */
-  String getRequestInfo();
+  java.lang.String getRequestInfo();
   /**
    * <code>string request_info = 1;</code>
    * @return The bytes for requestInfo.

@@ -11,7 +11,7 @@ public interface StudentResponseOrBuilder extends
    * <code>string name = 1;</code>
    * @return The name.
    */
-  String getName();
+  java.lang.String getName();
   /**
    * <code>string name = 1;</code>
    * @return The bytes for name.
@@ -29,7 +29,7 @@ public interface StudentResponseOrBuilder extends
    * <code>string city = 3;</code>
    * @return The city.
    */
-  String getCity();
+  java.lang.String getCity();
   /**
    * <code>string city = 3;</code>
    * @return The bytes for city.

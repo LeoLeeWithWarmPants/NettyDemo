@@ -11,7 +11,7 @@ public interface MyRequestOrBuilder extends
    * <code>string username = 1;</code>
    * @return The username.
    */
-  String getUsername();
+  java.lang.String getUsername();
   /**
    * <code>string username = 1;</code>
    * @return The bytes for username.
