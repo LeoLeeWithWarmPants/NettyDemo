@@ -1,40 +1,43 @@
 plugins {
     id 'java'
-//    id 'com.google.protobuf' version '0.8.8' //使用gRPC插件根据.proto文件生成java code后一定要关闭插件
+    id 'com.google.protobuf' version '0.8.8'
 }
 
-//使用gRPC插件根据.proto文件生成java code后一定要关闭插件
-//protobuf {
-//    protoc {
-//        artifact = "com.google.protobuf:protoc:3.12.0"
-//    }
-//    plugins {
-//        grpc {
-//            artifact = 'io.grpc:protoc-gen-grpc-java:1.32.1'
-//        }
-//    }
-//    generateProtoTasks {
-//        all()*.plugins {
-//            grpc {}
-//        }
-//    }
-//}
-//使用gRPC插件根据.proto文件生成java code后一定要关闭插件
-//sourceSets {
-//    main {
-//        proto {
-//            // In addition to the default 'src/main/proto'
-//            srcDir 'src/main/proto'
-//            //srcDir 'src/main/protocolbuffers' 可以定义多个
-//        }
-//    }
-//    test {
-//        proto {
-//            // In addition to the default 'src/test/proto'
-//            srcDir 'src/test/protocolbuffers'
-//        }
-//    }
-//}
+protobuf {
+
+    protoc {
+        artifact = "com.google.protobuf:protoc:3.12.0"
+    }
+    plugins {
+        grpc {
+            artifact = 'io.grpc:protoc-gen-grpc-java:1.32.1'
+        }
+    }
+    generateProtoTasks {
+        all()*.plugins {
+            grpc {
+                outputSubDir = 'java'
+            }
+        }
+    }
+    generatedFilesBaseDir = "src"
+}
+sourceSets {
+      //.proto文件扫描位置自定义
+    main {
+        proto {
+            // In addition to the default 'src/main/proto'
+            srcDir 'src/main/proto'
+            //srcDir 'src/main/protocolbuffers' 可以定义多个
+        }
+    }
+    test {
+        proto {
+            // In addition to the default 'src/test/proto'
+            srcDir 'src/test/protocolbuffers'
+        }
+    }
+}
 
 tasks.withType(JavaCompile) {
     options.encoding = "UTF-8"
