@@ -1,4 +1,4 @@
-package com.leolee.netty.scalableIOInJava;
+package com.leolee.scalableIOInJava;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
