@@ -54,7 +54,7 @@ public class NIOServerTest {
                         ServerSocketChannel serverSocketChannel1 = (ServerSocketChannel) selectionKey.channel();
                         try {
                             //建立服务端和客户端连接的操作
-                            clientSocketChannel = serverSocketChannel.accept();
+                            clientSocketChannel = serverSocketChannel1.accept();
                             clientSocketChannel.configureBlocking(false);//非阻塞模式（异步模式）
                             //将与客户端建立好连接的channel注册到selector，并对“读”操作感兴趣
                             clientSocketChannel.register(selector, SelectionKey.OP_READ);
