@@ -1,4 +1,4 @@
-package com.leolee.netty.groupChat;
+package com.leolee.netty.demo.groupChat;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
