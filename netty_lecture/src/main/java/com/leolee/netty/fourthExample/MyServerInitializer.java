@@ -21,6 +21,9 @@ public class MyServerInitializer extends ChannelInitializer<SocketChannel> {
 
         ChannelPipeline pipeline = ch.pipeline();
         //IdleStateHandler是空闲时间处理器，在一定时间没有读或者写操作，就会被触发
+        //long readerIdleTime:该客户端有多久没有读了，才会发送一个心跳检测包检测是否连接
+        //long writerIdleTime:该客户端多久没有写操作了，才会发送一个心跳检测包检测是否连接
+        //long allIdleTime:该客户端多久没有读和写了，才会发送一个心跳检测包检测是否连接
         pipeline.addLast(new IdleStateHandler(5, 7, 10, TimeUnit.SECONDS));
         pipeline.addLast(new MyServerHandler());
     }
